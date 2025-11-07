@@ -35,8 +35,8 @@
 
 #rhayu-bubble {
     position: absolute;
-    left: -15px;
-    top: 5px;
+    left: -25px;
+    top: -5px;
     width: 260px;       
     text-align: center;  
     background: #fffbe6;
@@ -70,9 +70,10 @@
 #petpet-gif {
     display:none;
     position:absolute; 
-    left: 120px; 
-    top: 20px; 
-    width: 80px; 
+    left: 100px; 
+    top: 40px; 
+    width: 80px;
+    height: 80px; 
     pointer-events: none;
 }
 
