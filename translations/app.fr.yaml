@@ -1,0 +1,56 @@
+# ------------------------------ Projects Infos ------------------------------ #
+
+valtoria_name: "Valtoria"
+valtoria_paragraph_1: "Un MMORPG textuel sur le thème de Pokémon Donjon Mystère, avec actuellement environ 170 joueurs inscrits. Développé avec Symfony principalement, ce projet à également nécessité l'utilisation de librairies ou solutions plus complexes comme PIXI.JS et Mercure.rocks."
+valtoria_paragraph_2: "Ce projet propose une expérience narrative immersive où les joueurs incarnent des Pokémon explorateurs, évoluant dans un monde persistant inspiré de l’univers de la série. L’accent est mis sur l’exploration du monde et l’interaction entre joueurs, le tout soutenu par un système de quêtes et d’instances." 
+
+portfolio_name: "Portfolio"
+portfolio_paragraph_1: "Petit site réalisé avec Symfony, surlequel vous êtes en train de naviguer ! J'espère que vous appréciez mon travail ! :)"
+
+devoliria-equicie_name: "Devoliria Equicie"
+devoliria-equicie_paragraph_1: "Petit site vitrine réalisé avec Wordpress pour une cliente qui avait un besoin de rendre visible son activité d'équicie sur le web !"
+
+# ----------------------------------- Base ----------------------------------- #
+
+title: "Takoros (Steven Breziat) - Développeur Web"
+description: "Site portfolio professionnel. Je suis un développeur Web de 24 ans, spécialisé en Php Symfony. Venez découvrir mes projets !"
+
+introduction: "Présentation"
+projects: "Projets"
+contact: "Contact"
+
+# ----------------------------------- Home ----------------------------------- #
+
+introduction_title: "Bonjour, je suis Takoros"
+introduction_text: "Un développeur Web basé à Angers avec 4 ans d'expérience dans le domaine et freelance depuis 2 ans."
+
+introduction_download_cv: "Télécharger mon CV"
+
+rhayu_dialogue_1: "Mrrp ❤"
+rhayu_dialogue_2: "Comment je suis censer coder dans ces conditions ?"
+rhayu_dialogue_3: "Merci du soutien !"
+rhayu_dialogue_4: "Hé, ça chatouille !"
+rhayu_dialogue_5: "Je ne suis pas un chat, tu sais ?"
+rhayu_dialogue_6: "C’est légal, tant d’affection ?"
+
+last_activities: "Dernières Activités"
+see_github: "Voir Github"
+current_tech_stack: "Tech stack actuelle"
+last_projects: "Derniers Projets"
+
+# --------------------------------- Projects --------------------------------- #
+
+my_projects: "Mes Projets"
+screenshots: "Screenshots"
+
+# ---------------------------------- Contact --------------------------------- #
+
+contact_me: "Contactez-Moi"
+
+name: "Nom"
+email: "Email"
+subject: "Sujet"
+content_of_your_message: "Contenu de votre message"
+contact_informations: "Informations de contact"
+
+phone_number: "06 42 82 49 50"

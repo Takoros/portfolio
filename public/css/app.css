@@ -1,0 +1,571 @@
+@font-face {
+    font-family: 'Fantasy Magist';
+    src: url('../fonts/FANTASY\ MAGIST.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.woff2') format('woff2'),
+        url('../fonts/Poppins-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;           
+    align-items: center;
+    background-color: #FCE1B6;
+}
+
+nav {
+    width: 220px;
+    min-width: 220px !important;
+    height: 95%;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: #D0B076;
+    margin-left: 10px;
+    position: relative;
+}
+
+.navUsername {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Fantasy Magist';
+    margin-top: 10px;
+}
+
+.navName {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Fantasy Magist';
+    margin-top: -15px;
+}
+
+nav ul {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style-type: none;
+  width: 80%;
+  padding: 0;
+}
+
+nav ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: start;
+}
+
+nav ul li a {
+    font-family: 'Poppins';
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.navActive {
+    font-weight: bold;
+}
+
+.navSeparator {
+    height: 1px;
+    background-color: black;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul li:not(.navActive) a {
+    position: relative;
+}
+
+nav ul li:not(.navActive) a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s;
+}
+
+nav ul li:not(.navActive) a:hover::after {
+    width: 100%;
+}
+
+.navLocales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.navLocales img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.content {
+    margin-left: 45px;
+    height: 95%;
+    flex: 1;
+}
+
+.project {
+    width: 340px;
+    height: 165px;
+    border: 1px solid black;
+    background-color: #D0B076;
+}
+
+.project:hover {
+    cursor: pointer;
+}
+
+.project img {
+    height: 115px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.projectDivider {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin-top: -4px;
+    margin-bottom: 0;
+}
+
+.projectTitleContainer {
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.projectTitleContainer img {
+    width: 44px;
+    height: 44px;
+    margin-left: 2.5px;
+    margin-bottom: 2px;
+}
+
+.projectTitleContainer span {
+    font-size: 20px;
+    font-family: 'Poppins';
+    margin-left: 10px;
+}
+
+
+@media screen and (max-width: 830px), screen and (max-height: 600px) {
+    .content {
+        margin-left: 10px !important;
+        margin-right: 10px;
+    }
+
+    body {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav {
+        width: 95%;
+        height: 115px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+
+    .navUsername {
+        font-size: 36px;
+        margin-top: 8px;
+    }
+
+    .navName {
+        text-align: center;
+        font-size: 14px;
+        font-family: 'Fantasy Magist';
+        margin-top: -15px;
+    }
+
+    nav ul {
+        position: static;
+        transform: none;
+        list-style-type: none;
+        width: 90%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav ul li {
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-family: 'Poppins';
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+        margin-left: 0px;
+    }
+
+    .navSeparator {
+        height: 1px;
+        background-color: black;
+        width: 10px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .navLocales {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: fit-content;
+        height: fit-content;
+        bottom: unset;
+        left: unset;
+        transform: none;
+    }
+
+    .navLocales img {
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        height: 90px;
+    }
+
+    .navUsername {
+        font-size: 32px;
+        margin-top: 2px;
+    }
+
+    .navName {
+        font-size: 13px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .navSeparator {
+        width: 8px;
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    nav ul {
+        margin-top: 8px;
+    }
+}
+
+/* ----------------------------- Project Details ---------------------------- */
+
+.projectDetailsContainer {
+    position: fixed;
+    inset: 0; 
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+}
+
+.projectDetailsBlackScreen {
+    display: block;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.project-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 800px;
+    max-width: calc(100% - 40px);
+    max-height: calc(100vh - 80px);
+    overflow: auto; 
+    background-color: #FCE1B6;
+    border: 2px solid black;
+    border-radius: 5px;
+    z-index: 10000; 
+}
+
+.project-details:focus-visible {
+    outline: none;
+}
+
+.project-details-image {
+    width: 700px;
+    height: 180px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    display: block;
+}
+
+
+.project-details-tags {
+    display: flex;
+    margin-top: 5px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-details-tag {
+    background-color: #D0B076;
+    padding: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 40px;
+    width: fit-content;
+    font-family: 'Poppins';
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+.project-details-name {
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Fantasy Magist';
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.project-details-content {
+    margin-top: -10px;
+    font-family: 'Poppins';
+    font-size: 14px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-details-screenshots-title {
+    font-family: 'Fantasy Magist';
+    font-weight: normal;
+    font-size: 24px;
+    width: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.project-details-screenshots {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.project-details-screenshots img {
+    width: 175px;
+    border: 2px solid black;
+    margin-right: 10px;
+}
+
+.project-details-screenshots img:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 815px) {
+    .project-details {
+        width: 600px;
+        max-height: 90%;
+        overflow-y: scroll;
+    }
+
+    .project-details-image, .project-details-tags, .project-details-screenshots-title, .project-details-screenshots {
+        width: 540px;
+    }  
+}
+
+@media (max-width: 615px) {
+    .project-details {
+        width: 400px;
+    }
+
+    .project-details-image, .project-details-tags, .project-details-screenshots-title, .project-details-screenshots {
+        width: 340px;
+    }  
+
+    .project-details-content {
+        margin-top: -5px;
+        font-size: 11px;
+        width: 80%;
+    }
+
+    .project-details-screenshots-title {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .project-details-screenshots img {
+        width: 100px;
+        margin-right: 5px;
+    }
+
+    .project-details-name {
+        font-size: 22px;
+    }
+
+    .project-details-tag {
+        padding: 2px;
+        padding-left: 6px;
+        padding-right: 6px;
+        border-radius: 40px;
+        font-size: 9px;
+        margin-right: 6px;
+    }
+
+    .project-details-image {
+        height: 120px;
+    }
+}
+
+@media (max-width: 415px) {
+    .project-details {
+        width: 330px;
+    }
+
+    .project-details-image, .project-details-tags, .project-details-screenshots-title, .project-details-screenshots {
+        width: 270px;
+    }
+    
+    .project-details-screenshots {
+        flex-wrap: wrap;
+    }
+
+    .project-details-screenshots img {
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+/* ---------------------------- Screenshots Modal --------------------------- */
+
+/* Minimal lightbox styles - global */
+.lightbox-modal{
+    position:fixed;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,0,0,0.85);
+    z-index:10000;
+    visibility:hidden;
+    opacity:0;
+    transition:opacity .2s ease,visibility .2s;
+}
+
+.lightbox-modal[aria-hidden="false"]{
+    visibility:visible;opacity:1
+}
+
+.lightbox-content{
+    max-width:90%;
+    max-height:85%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.lightbox-image{
+    max-width:100%;
+    max-height:100%;
+    border-radius:6px;
+    box-shadow:0 6px 30px rgba(0,0,0,.6)
+}
+
+.lightbox-close,.lightbox-prev,.lightbox-next{
+    position:absolute;
+    background:transparent;
+    color:#fff;
+    border:0;
+    font-size:2rem;
+    padding:.4rem;
+    cursor:pointer
+}
+
+.lightbox-close{
+    top:18px;
+    right:22px;
+    font-size:2.4rem
+}
+
+.lightbox-prev{
+    left:18px
+}
+
+.lightbox-next{
+    right:18px
+}
+
+.lightbox-counter{
+    color:#eee;
+    margin-top:.6rem;
+    font-size:.9rem
+}
+
+@media (max-width:600px){
+    .lightbox-prev,.lightbox-next{
+        font-size:1.6rem;
+        left:8px;
+        right:8px
+    }
+    
+    .lightbox-close{
+        font-size:1.8rem;
+    }
+}

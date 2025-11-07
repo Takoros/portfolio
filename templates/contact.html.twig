@@ -1,0 +1,53 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'contact_me'|trans({}, 'app') }}</h1>
+    {% for label, messages in app.flashes %}
+        {% for msg in messages %}
+            <div class="flash-{{ label }}">{{ msg }}</div>
+        {% endfor %}
+    {% endfor %}
+
+    <div class="contactFormContainer">
+        {{ form_start(contactForm) }}
+
+            <div class="contactFormFirstRow">
+                <div class="contactFormName">
+                    {{ form_widget(contactForm.name, {'attr': {'placeholder': 'name'|trans({}, 'app')}}) }}
+                </div>
+
+                <div class="contactFormEmail">
+                    {{ form_widget(contactForm.email, {'attr': {'placeholder': 'email'|trans({}, 'app')}}) }}
+                </div>
+            </div>
+
+            <div class="contactFormSubject">
+                {{ form_widget(contactForm.subject, {'attr': {'placeholder': 'subject'|trans({}, 'app')}}) }}
+            </div>
+
+            <div class="contactFormMessage">
+                {{ form_widget(contactForm.message, {'attr': {'placeholder': 'content_of_your_message'|trans({}, 'app')}}) }}
+            </div>
+
+            <div class="contactFormSubmit">
+                {{ form_widget(contactForm.submit) }}
+            </div>
+        {{ form_end(contactForm) }}
+    </div>
+
+    <h2>{{ 'contact_informations'|trans({}, 'app') }}</h2>
+    <div class="contactInformations">
+        <div class="contactInfo">
+            <img src="{{ asset('icons/email.png') }}" alt="Email Icon">
+            <span>steven.breziat@gmail.com</span>
+        </div>
+        <div class="contactInfo">
+            <img src="{{ asset('icons/phone.png') }}" alt="Phone Icon">
+            <span>{{ 'phone_number'|trans({}, 'app') }}</span>
+        </div>
+    </div>
+{% endblock %}

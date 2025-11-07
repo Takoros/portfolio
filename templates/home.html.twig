@@ -1,0 +1,134 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="introduction">
+        <div class="introductionContent">
+            <div class="introductionText">
+                <h1>{{ 'introduction_title'|trans({}, 'app') }}</h1>
+                <p>{{ 'introduction_text'|trans({}, 'app') }}</p>
+            </div>
+            <div class="introductionButton">
+                <a href="{{ path('app_downloadCV', {'_locale': _locale}) }}">{{ 'introduction_download_cv'|trans({}, 'app') }}</a>
+            </div>
+        </div>
+
+        <div class="introductionImage">
+            <div id="rhayu-bubble" style="display:none;"></div>
+            <img id="rhayu-image" src="{{ asset('images/rhayu.png') }}" alt="Rhayu">
+            <img id="petpet-gif" src="{{ asset('images/petpet-transparent.gif') }}" alt="petpet">
+        </div>
+    </div>
+
+    <div class="secondPartContainer">
+        <div class="lastActivitiesContainer">
+            <h2>{{ 'last_activities'|trans({}, 'app') }}</h2>
+            <div class="githubChartContainer">
+                <img class="githubChart" src="https://ghchart.rshah.org/573B10/takoros" alt="Takoros's Github chart"/>
+                <div class="exploreGithubButton"><a href="https://github.com/Takoros">{{ 'see_github'|trans({}, 'app') }} <img src="{{ asset('icons/github-mark.svg') }}" alt="Github Icon"></a></div>
+            </div>
+        </div>
+
+        <div class="currentTechStackContainer">
+            <h2>{{ 'current_tech_stack'|trans({}, 'app') }}</h2>
+            <div class="techsContainer">
+                <a href="https://www.php.net"><img title="PHP" src="{{ asset('icons/php.webp') }}" alt="Php Icon"></a>
+                <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript"><img title="Javascript" src="{{ asset('icons/js.webp') }}" alt="Javascript Icon"></a>
+                <a href="https://symfony.com"><img title="Symfony" src="{{ asset('icons/symfony.webp') }}" alt="Symfony Icon"></a>
+                <a href="https://developer.mozilla.org/fr/docs/Web/HTML"><img title="HTML5" src="{{ asset('icons/html5.webp') }}" alt="HTML5 Icon"></a>
+                <a href="https://developer.mozilla.org/fr/docs/Web/CSS"><img title="CSS3" src="{{ asset('icons/css3.webp') }}" alt="CSS3 Icon"></a>
+                <a href="https://mercure.rocks"><img title="Mercure.rocks" src="{{ asset('icons/mercure-rocks.webp') }}" alt="Mercure.rocks Icon"></a>
+                <a href="https://pixijs.com"><img title="PIXI.JS" src="{{ asset('icons/pixi-js.webp') }}" alt="PIXI.JS Icon"></a>
+                <a href="https://mariadb.org"><img title="MariaDB" src="{{ asset('icons/mariadb.svg') }}" alt="MariaDB Icon"></a>
+                <a href="https://www.docker.com"><img title="Docker" src="{{ asset('icons/docker.webp') }}" alt="Docker Icon"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="lastPartContainer">
+        <div class="lastProjectsContainer">
+            <h2>{{ 'last_projects'|trans({}, 'app') }}</h2>
+            <div class="lastProjects">
+                {% include "_part/project-mini.html.twig" with {'projectId': 'portfolio'} only %}
+                {% include "_part/project-mini.html.twig" with {'projectId': 'valtoria'} only %}
+                {% include "_part/project-mini.html.twig" with {'projectId': 'devoliria-equicie'} only %}
+            </div>
+        </div>
+
+        <div class="currentTechStackContainer currentTechStackContainerMobile">
+            <h2>{{ 'current_tech_stack'|trans({}, 'app') }}</h2>
+            <div class="techsContainer">
+                <a href="https://www.php.net"><img title="PHP" src="{{ asset('icons/php.webp') }}" alt="Php Icon"></a>
+                <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript"><img title="Javascript" src="{{ asset('icons/js.webp') }}" alt="Javascript Icon"></a>
+                <a href="https://symfony.com"><img title="Symfony" src="{{ asset('icons/symfony.webp') }}" alt="Symfony Icon"></a>
+                <a href="https://developer.mozilla.org/fr/docs/Web/HTML"><img title="HTML5" src="{{ asset('icons/html5.webp') }}" alt="HTML5 Icon"></a>
+                <a href="https://developer.mozilla.org/fr/docs/Web/CSS"><img title="CSS3" src="{{ asset('icons/css3.webp') }}" alt="CSS3 Icon"></a>
+                <a href="https://mercure.rocks"><img title="Mercure.rocks" src="{{ asset('icons/mercure-rocks.webp') }}" alt="Mercure.rocks Icon"></a>
+                <a href="https://pixijs.com"><img title="PIXI.JS" src="{{ asset('icons/pixi-js.webp') }}" alt="PIXI.JS Icon"></a>
+                <a href="https://mariadb.org"><img title="MariaDB" src="{{ asset('icons/mariadb.svg') }}" alt="MariaDB Icon"></a>
+                <a href="https://www.docker.com"><img title="Docker" src="{{ asset('icons/docker.webp') }}" alt="Docker Icon"></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block projectDetails %}
+    {% include "project_details/valtoria.html.twig" %}
+    {% include "project_details/portfolio.html.twig" %}
+    {% include "project_details/devoliria-equicie.html.twig" %}
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let clickCount = 0;
+            let bubbleTimeout = null;
+            let isAnimating = false;
+            const rhayu = document.getElementById('rhayu-image');
+            const bubble = document.getElementById('rhayu-bubble');
+            const petpet = document.getElementById('petpet-gif');
+
+            const dialogues = [
+                "{{ 'rhayu_dialogue_1'|trans({}, 'app') }}",
+                "{{ 'rhayu_dialogue_2'|trans({}, 'app') }}",
+                "{{ 'rhayu_dialogue_3'|trans({}, 'app') }}",
+                "{{ 'rhayu_dialogue_4'|trans({}, 'app') }}",
+                "{{ 'rhayu_dialogue_5'|trans({}, 'app') }}",
+                "{{ 'rhayu_dialogue_6'|trans({}, 'app') }}"
+            ];
+
+            rhayu.addEventListener('click', function() {
+                if (isAnimating) return; // Protection anti-spam
+
+                if (bubble.style.display === 'block') {
+                    bubble.style.display = 'none';
+                    if (bubbleTimeout) {
+                        clearTimeout(bubbleTimeout);
+                        bubbleTimeout = null;
+                    }
+                }
+
+                isAnimating = true;
+                petpet.style.display = 'block';
+                setTimeout(() => {
+                    petpet.style.display = 'none';
+                    isAnimating = false;
+                }, 800);
+
+                clickCount++;
+                if (clickCount >= 3) {
+                    bubble.textContent = dialogues[Math.floor(Math.random() * dialogues.length)];
+                    bubble.style.display = 'block';
+                    clickCount = 0;
+                    bubbleTimeout = setTimeout(() => {
+                        bubble.style.display = 'none';
+                        bubbleTimeout = null;
+                    }, 2000);
+                }
+            });
+        });
+    </script>
+{% endblock %}

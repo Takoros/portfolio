@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/projects.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'my_projects'|trans({}, 'app') }}</h2>
+
+    <div class="projects">
+        {% include "_part/project-mini.html.twig" with {'projectId': 'portfolio'} only %}
+        {% include "_part/project-mini.html.twig" with {'projectId': 'valtoria'} only %}
+        {% include "_part/project-mini.html.twig" with {'projectId': 'devoliria-equicie'} only %}
+    </div>
+{% endblock %}
+
+{% block projectDetails %}
+    {% include "project_details/valtoria.html.twig" %}
+    {% include "project_details/portfolio.html.twig" %}
+    {% include "project_details/devoliria-equicie.html.twig" %}
+{% endblock %}

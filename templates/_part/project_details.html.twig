@@ -1,0 +1,18 @@
+<div id="project-details_{{ projectId }}" class="project-details">
+    <img class="project-details-image" src="{{ asset('images/project-details/' ~ projectId ~ '.webp') }}" alt="{{ (projectId ~ '_name')|trans({}, 'app')}}">
+    <div class="project-details-tags">
+        {% for tag in projectTags %}
+            <div class="project-details-tag">{{ tag }}</div>
+        {% endfor %}
+    </div>
+    <div class="project-details-name">{{ (projectId ~ '_name')|trans({}, 'app') }}</div>
+    
+    <div class="project-details-content">
+        {% block projectContent %}{% endblock %}
+    </div>
+
+    <span class="project-details-screenshots-title">{{ 'screenshots'|trans({}, 'app') }}</span>
+    <div class="project-details-screenshots">
+        {% block projectScreenshots %}{% endblock %}
+    </div>
+</div>

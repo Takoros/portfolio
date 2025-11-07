@@ -1,0 +1,14 @@
+{% extends "_part/project_details.html.twig" %}
+
+{% set projectId = 'devoliria-equicie' %}
+{% set projectTags = ['Wordpress', 'Php'] %}
+
+
+{% block projectContent %}
+    <p>{{ 'devoliria-equicie_paragraph_1'|trans({}, 'app') }}</p>
+{% endblock %}
+
+{% block projectScreenshots %}
+    <img src="{{ asset('images/project-details/screenshots/devoliria-equicie_1.png') }}" alt="Devoliria Equicie's screenshot 1">
+    <img src="{{ asset('images/project-details/screenshots/devoliria-equicie_2.png') }}" alt="Devoliria Equicie's screenshot 2">
+{% endblock %}

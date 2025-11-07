@@ -1,0 +1,13 @@
+{% extends "_part/project_details.html.twig" %}
+
+{% set projectId = 'portfolio' %}
+{% set projectTags = ['Symfony', 'Php', 'Javascript'] %}
+
+{% block projectContent %}
+    <p>{{ 'portfolio_paragraph_1'|trans({}, 'app') }}</p>
+{% endblock %}
+
+{% block projectScreenshots %}
+    <img src="{{ asset('images/project-details/screenshots/portfolio_1.png') }}" alt="Portfolio's screenshot 1">
+    <img src="{{ asset('images/project-details/screenshots/portfolio_2.png') }}" alt="Portfolio's screenshot 2">
+{% endblock %}

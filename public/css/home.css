@@ -1,0 +1,414 @@
+.introduction {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.introductionText h1 {
+    font-size: 40px;
+    font-family: 'Fantasy Magist';
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.introductionText p {
+    font-size: 20px;
+    font-family: 'Poppins';
+    margin-top: 0;
+    max-width: 625px;
+}
+
+.introductionImage {
+    position: relative;
+    display: inline-block;
+    margin-top: -25px;
+}
+
+.introductionImage img {
+    height: 380px;
+    margin-left: 125px;
+}
+
+.introductionImage img:hover {
+    cursor: pointer;
+}
+
+#rhayu-bubble {
+    position: absolute;
+    left: -15px;
+    top: 5px;
+    width: 260px;       
+    text-align: center;  
+    background: #fffbe6;
+    border: 2px solid #d0b076;
+    border-radius: 20px;
+    padding: 10px 12px;   
+    font-family: 'Poppins';
+    font-size: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 2;
+    white-space: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rhayu-bubble::after {
+    content: '';
+    position: absolute;
+    right: 15px; 
+    bottom: -18px; 
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 0 solid transparent;
+    border-top: 18px solid #fffbe6;
+    border-bottom: 0 solid transparent;
+    z-index: 2;
+}
+
+#petpet-gif {
+    display:none;
+    position:absolute; 
+    left: 120px; 
+    top: 20px; 
+    width: 80px; 
+    pointer-events: none;
+}
+
+.introductionButton {
+    background-color: #D0B076;
+    width: fit-content;
+    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Poppins';
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 35px;
+}
+
+.introductionButton a {
+    color: black;
+    text-decoration: none;
+}
+
+
+h2 {
+    font-size: 24px;
+    font-family: 'Poppins';
+    font-weight: normal;
+    margin-bottom: 2px;
+    margin-top: 40px;
+}
+
+.secondPartContainer {
+    display: flex;
+    margin-top: 50px;
+}
+
+.githubChartContainer {
+    border: 1px solid black;
+    padding: 8px;
+    width: fit-content;
+    position: relative;
+}
+
+.githubChart {
+    width: 663px;
+    height: 104px
+}
+
+.exploreGithubButton {
+    position: absolute;
+    top: -40px;
+    right: 0px;
+}
+
+.exploreGithubButton a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid black;
+    width: fit-content;
+    border-radius: 13px;
+}
+
+.exploreGithubButton a img {
+    margin-left: 8px;
+    width: 25px;
+}
+
+.currentTechStackContainer {
+    margin-left: 50px;
+}
+
+.techsContainer {
+    border: 1px solid black;
+    width: 280px;
+    height: 112px !important;
+    padding: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.techsContainer img {
+    width: 39px;
+    transition: transform 0.2s;
+}
+
+.techsContainer img:hover {
+    transform: rotate(-8deg) scale(1.07);
+}
+
+.techsContainer a {
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+    display: flex;
+    justify-content: center;
+}
+
+.lastProjectsContainer {
+    margin-top: 70px;
+}
+
+.lastProjects {
+    display: flex;
+    margin-top: 5px;
+}
+
+.project {
+    margin-right: 40px;
+}
+
+.currentTechStackContainerMobile {
+    display: none;
+}
+
+/* ------------------------------- RESPONSIVE ------------------------------- */
+
+@media (max-height: 1025px) {
+    .secondPartContainer {
+        margin-top: -20px;
+    }
+}
+
+@media (max-width: 1430px) {
+    .project {
+        width: 250px;
+        height: 130px;
+        margin-right: 20px;
+    }
+
+    .project img {
+        height: 80px;
+    }
+
+    .projectTitleContainer img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .projectTitleContainer span {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .introductionText h1 {
+        font-size: 38px;
+    }
+
+    .introductionText p {
+        font-size: 18px;
+    }
+
+    .introductionButton {
+        font-size: 14px;
+    }
+
+    .introductionImage img {
+        margin-left: 100px;
+        margin-right: 25px;
+    }
+}
+
+@media (max-width: 1340px) {
+    .secondPartContainer {
+        margin-right: 20px;
+    }
+
+    .githubChart {
+        width: 100%;
+        height: 104px;
+        display: block;
+        object-fit: cover;
+        object-position: right;
+    }
+}
+
+@media (max-width: 1100px) {
+    .content {
+        margin-left: 20px;
+    }
+
+    .introduction {
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+
+    .introductionImage img {
+        height: 300px;
+        margin-left: 0;
+    }
+
+    .introductionText h1 {
+        font-size: 34px;
+    }
+
+    .introductionText p {
+        font-size: 16px;
+    }
+
+    .introductionButton {
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .currentTechStackContainer {
+        display: none;
+    }
+
+    .currentTechStackContainerMobile {
+        display: block;
+        margin-left: 10px;
+    }
+    
+    .lastProjectsContainer {
+        margin-top: 0;
+    }
+
+    .lastProjects {
+        flex-direction: column;
+    }
+
+    .lastPartContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .project {
+        margin-bottom: 10px;
+    }
+
+    .project:last-of-type {
+        display: none;
+    }
+
+    .secondPartContainer {
+        justify-content: center;
+    }
+
+    .techsContainer {
+        border: 1px solid black;
+        width: 250px;
+        height: 100px !important;
+        margin-top: 5px;
+    }
+
+    .techsContainer img {
+        width: 34px;
+        height: 34px;
+        transition: transform 0.2s;
+    }
+
+    .project {
+        width: 250px;
+        height: 120px;
+        margin-right: 20px;
+    }
+
+    .projectTitleContainer img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .projectTitleContainer {
+        height: 40px;
+    }
+
+    .projectTitleContainer span {
+        font-size: 16px;
+    }
+
+    .exploreGithubButton a {
+        font-size: 12px;
+        padding: 4px;
+        padding-left: 9px;
+        padding-right: 9px;
+        border-radius: 12px;
+    }
+
+    .exploreGithubButton a img {
+        margin-left: 8px;
+        width: 20px;
+    }
+}
+
+@media (max-width: 830px) {
+    .secondPartContainer {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .introductionText h1 {
+        font-size: 30px;
+    }
+
+    .introductionText p {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .lastPartContainer {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .lastPartContainer h2 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .project {
+        margin-right: 0;
+    }
+
+    .currentTechStackContainerMobile {
+        margin-left: -8px;
+    }
+
+    .githubChart {
+        height: 90px;
+    }
+}

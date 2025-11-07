@@ -1,0 +1,56 @@
+# ------------------------------ Projects Infos ------------------------------ #
+
+valtoria_name: "Valtoria"
+valtoria_paragraph_1: "A text-based MMORPG inspired by Pokémon Mystery Dungeon, currently featuring around 170 registered players. Mainly developed with Symfony, this project also required the use of more complex libraries and solutions such as PIXI.JS and Mercure.rocks."
+valtoria_paragraph_2: "This project offers an immersive narrative experience where players take on the roles of Pokémon explorers, evolving in a persistent world inspired by the series’ universe. The focus is on world exploration and player interaction, supported by a system of quests and instances."
+
+portfolio_name: "Portfolio"
+portfolio_paragraph_1: "A small website built with Symfony, which you’re currently browsing! I hope you enjoy my work! :)"
+
+devoliria-equicie_name: "Devoliria Equicie"
+devoliria-equicie_paragraph_1: "A small showcase website built with WordPress for a client who wanted to make her equine therapy business visible online!"
+
+# ----------------------------------- Base ----------------------------------- #
+
+title: "Takoros (Steven Breziat) - Web Developer"
+description: "Professional portfolio website. I'm a French 24-year-old web developer specialized in PHP Symfony. Come discover my projects!"
+
+introduction: "Introduction"
+projects: "Projects"
+contact: "Contact"
+
+# ----------------------------------- Home ----------------------------------- #
+
+introduction_title: "Hello, I'm Takoros"
+introduction_text: "A French web developer based in Angers with 4 years of experience in the field and 2 years as a freelancer."
+
+introduction_download_cv: "Download my CV"
+
+rhayu_dialogue_1: "Mrrp ❤"
+rhayu_dialogue_2: "How am I supposed to code under these conditions?"
+rhayu_dialogue_3: "Thanks for the support!"
+rhayu_dialogue_4: "Hey, that tickles!"
+rhayu_dialogue_5: "I'm not a cat, you know?"
+rhayu_dialogue_6: "Is that much affection even legal?"
+
+last_activities: "Latest Activities"
+see_github: "View Github"
+current_tech_stack: "Current Tech Stack"
+last_projects: "Latest Projects"
+
+# --------------------------------- Projects --------------------------------- #
+
+my_projects: "My Projects"
+screenshots: "Screenshots"
+
+# ---------------------------------- Contact --------------------------------- #
+
+contact_me: "Contact Me"
+
+name: "Name"
+email: "Email"
+subject: "Subject"
+content_of_your_message: "Message Content"
+contact_informations: "Contact Information"
+
+phone_number: "+33 6 42 82 49 50"

@@ -1,0 +1,17 @@
+<nav>
+    <div class="navUsername">Takoros</div>
+    <div class="navName">Steven Breziat</div>
+
+    <ul>
+        <li class="{{ app.request.attributes.get('_route') == 'app_home' ? 'navActive' : '' }}"><a href="{{ path('app_home', {'_locale': _locale}) }}">{{ 'introduction'|trans({}, 'app') }}</a></li>
+        <div class="navSeparator"></div>
+        <li class="{{ app.request.attributes.get('_route') == 'app_projects' ? 'navActive' : '' }}"><a href="{{ path('app_projects', {'_locale': _locale}) }}">{{ 'projects'|trans({}, 'app') }}</a></li>
+        <div class="navSeparator"></div>
+        <li class="{{ app.request.attributes.get('_route') == 'app_contact' ? 'navActive' : '' }}"><a href="{{ path('app_contact', {'_locale': _locale}) }}">{{ 'contact'|trans({}, 'app') }}</a></li>
+    </ul>
+
+    <div class="navLocales">
+        <a href="{{ path(route, route_params|merge({'_locale': 'fr'}))}}"><img src="{{ asset('icons/france.webp') }}" alt="France flag Icon"></a>
+        <a href="{{ path(route, route_params|merge({'_locale': 'en'}))}}"><img src="{{ asset('icons/united-kingdom.webp') }}" alt="United Kingdom flag Icon"></a>
+    </div>
+</nav>

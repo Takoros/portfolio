@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>{{ 'title'|trans({}, 'app') }} {% block subtitle %}{% endblock %}</title>
+        <meta name="description" content="{{ 'description'|trans({}, 'app') }}">
+        <meta name="robots" content="index, follow">
+        <meta property="og:title" content="{{ 'title'|trans({}, 'app') }} {% block subtitleOg %}{% endblock %}">
+        <meta property="og:description" content="{{ 'description'|trans({}, 'app') }}">
+        <meta property="og:image" content="TODO">
+        <meta property="og:url" content="{{app.request.uri}}">
+        <meta property="og:type" content="website">
+        <link rel="canonical" href="{{app.request.uri}}">
+
+        {% set supported_locales = constant('App\\Controller\\MainController::SUPPORTED_LANGUAGES') %}
+        {% set route = app.request.attributes.get('_route') %}
+        {% set route_params = app.request.attributes.get('_route_params') %}
+
+        {% for locale in supported_locales %}
+            <link rel="alternate"
+                hreflang="{{ locale }}"
+                href="{{ path(route, route_params|merge({'_locale': locale})) }}">
+        {% endfor %}
+
+        <link rel="alternate" hreflang="x-default" href="{{ path(route, route_params|merge({'_locale': 'fr'})) }}">
+        
+        <link rel="icon" href="{{ asset('icons/feather.webp') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+        <script src="{{ asset('js/screenshot-modal.js') }}"></script>
+    </head>
+    <body>
+        {% include "_part/navbar.html.twig" %}
+        
+        <div class="content">
+            {% block body %}{% endblock %}
+        </div>
+
+        <div class="projectDetailsContainer" aria-hidden="true">
+            <span class="projectDetailsBlackScreen"></span>
+            {% block projectDetails %}{% endblock %}
+        </div>
+
+        <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Image viewer">
+            <button class="lightbox-close" aria-label="Close">×</button>
+            <button class="lightbox-prev" aria-label="Previous">‹</button>
+            <div class="lightbox-content">
+                <img src="" alt="" class="lightbox-image">
+                <div class="lightbox-counter"></div>
+            </div>
+            <button class="lightbox-next" aria-label="Next">›</button>
+        </div>
+    </body>
+</html>

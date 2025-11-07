@@ -1,0 +1,16 @@
+{% extends "_part/project_details.html.twig" %}
+
+{% set projectId = 'valtoria' %}
+{% set projectTags = ['Symfony', 'Php', 'Javascript', 'Mercure', 'PIXI.JS'] %}
+
+
+{% block projectContent %}
+    <p>{{ 'valtoria_paragraph_1'|trans({}, 'app') }}</p>
+    <p>{{ 'valtoria_paragraph_2'|trans({}, 'app') }}</p>
+{% endblock %}
+
+{% block projectScreenshots %}
+    <img src="{{ asset('images/project-details/screenshots/valtoria_1.png') }}" alt="Valtoria's screenshot 1">
+    <img src="{{ asset('images/project-details/screenshots/valtoria_2.png') }}" alt="Valtoria's screenshot 2">
+    <img src="{{ asset('images/project-details/screenshots/valtoria_3.png') }}" alt="Valtoria's screenshot 3">
+{% endblock %}
